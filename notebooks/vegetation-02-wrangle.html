@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>vegetation-00-setup</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>vegetation-02-wrangle</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,19 +7510,7 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=37cb02e3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3><b> Tubarjal Valley, Saudi Arabia, Irrigation Project</b></h3>
-<h5 id="In-this-project-we-observed-and-analyze-the-vegetation-growth-due-to-advancement-in-irrigation-in-our-region-of-interest.">In this project we observed and analyze the vegetation growth due to advancement in irrigation in our region of interest.<a class="anchor-link" href="#In-this-project-we-observed-and-analyze-the-vegetation-growth-due-to-advancement-in-irrigation-in-our-region-of-interest.">¶</a></h5><h5 id="Tubarjal-is-an-important-town-in-northern-Saudi-Arabia.-The-nearest-big-city-is-Qurayyat.">Tubarjal is an important town in northern Saudi Arabia. The nearest big city is Qurayyat.<a class="anchor-link" href="#Tubarjal-is-an-important-town-in-northern-Saudi-Arabia.-The-nearest-big-city-is-Qurayyat.">¶</a></h5><h5 id="Tubarjal-is-one-of-the-major-modern-towns-in-the-region-of-Al-Jawf,-where-it-has-for-over-forty-years-organized-the-settlement-project-and-dug-wells.-(Source:-Wikipedia)">Tubarjal is one of the major modern towns in the region of Al-Jawf, where it has for over forty years organized the settlement project and dug wells. (Source: Wikipedia)<a class="anchor-link" href="#Tubarjal-is-one-of-the-major-modern-towns-in-the-region-of-Al-Jawf,-where-it-has-for-over-forty-years-organized-the-settlement-project-and-dug-wells.-(Source:-Wikipedia)">¶</a></h5>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=398b218c">
+<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=684d4921">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7530,33 +7518,25 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Storing variables</span>
-<span class="o">%</span><span class="k">store</span> -r
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">store</span> -r
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e09e1256-76dc-4b7f-8c74-adf882766658">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6dd451c5-9e38-4fab-9eed-4b97d3fa1ee2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Import-libraries">Import libraries<a class="anchor-link" href="#Import-libraries">¶</a></h2><p>To complete the workflow We’ll need some Python libraries</p>
-<link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">First we Import necessary libraries</div></div><div class="callout-body-container callout-body"><p>In the cell below, making sure to keep the packages in order, add
-packages for:</p>
-<ul>
-<li>Working with DataFrames</li>
-<li>Working with GeoDataFrames</li>
-<li>Making interactive plots of tabular and vector data</li>
-</ul></div></div>
-<link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-respond"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">
+<p>You will also need to import any libraries you are using in this
+notebook, since they won’t carry over from the previous notebook:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a98a943f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=06b38089">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7566,9 +7546,17 @@ packages for:</p>
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span> 
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pathlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">earthpy.api.appeears</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">eaapp</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">earthpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hvplot.pandas</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">hvplot.xarray</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">rioxarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rxr</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 </pre></div>
@@ -7577,21 +7565,71 @@ packages for:</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c28acbf0-f17d-431f-8b7b-f627ba9a66c1">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a1ee89f7-c66f-4e2a-b44d-0c2a983c5507">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Downloading-sample-data">Downloading sample data<a class="anchor-link" href="#Downloading-sample-data">¶</a></h2><p>In this analysis, we download multiple data files to your
-computer rather than streaming them from the web.
-Next, we set up a folder for the files, and download the sample data there.</p>
-<link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill"></div></div><div class="callout-body-container callout-body"><p>In the cell below, we provide the ‘Project Name’ with 'earthpy'‘<span data-__quarto_custom="true" data-__quarto_custom_context="Inline" data-__quarto_custom_id="3" data-__quarto_custom_type="Shortcode"></span> and ’gc-tubarjal’ a
-<strong>descriptive</strong> directory name.</p></div></div>
+<h2 id="Load-in-NDVI-data">Load in NDVI data<a class="anchor-link" href="#Load-in-NDVI-data">¶</a></h2><p>Now you need to load all the downloaded files into Python. Let’s start
+by getting all the file names. You will also need to extract the date
+from the filename. Check out <a href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/loops/data-workflows-with-loops/">the lesson on getting information from
+filenames in the
+textbook</a>.</p>
+<p>Instead of writing out the names of all the files you want, you can use
+the <code>glob</code> utility to find all files that match a <strong>pattern</strong> formed
+with the <strong>wildcard</strong> character <code>*</code>. The wildcard can represent any
+string of alphanumeric characters. For example, the pattern
+<code>'file_*.tif'</code> will match the files <code>'file_1.tif'</code>, <code>'file_2.tiv'</code>, or
+even <code>'file_qeoiurghtfoqaegbn34pf.tif'</code>… but it will not match
+<code>'something-else.csv'</code> or even <code>'something-else.tif'</code>.</p>
+<p>In this notebook, we’ll use the <code>.rglob()</code>, or <strong>recursive</strong> glob method
+of the Path object instead. It works similarly, but you’ll notice that
+we have to convert the results to a list with the <code>list()</code> function.</p>
+<blockquote>
+<p><strong>GOTCHA ALERT!</strong></p>
+<p><code>glob</code> doesn’t necessarily find files in the order you would expect.
+Make sure to <strong>sort</strong> your file names like it says in the textbook.</p>
+</blockquote>
+<link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-respond"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">Reflect and Respond</div></div><div class="callout-body-container callout-body"><p>Take a look at the file names for the NDVI files. What do you notice
+is the same for all the files? Keep in mind that for this analysis you
+only want to import the NDVI files, not the Quality files (which would
+be used to identify potential incorrect measurements).</p></div></div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c7b77e5c">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=89707b56-bf3f-4176-bc94-f713abda09d9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>YOUR ANSWER HERE</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a46a1dc8-e1ed-45e1-9a43-029dc43ea9cd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">Try It</div></div><div class="callout-body-container callout-body"><ol type="1">
+<li>Create a <strong>pattern</strong> for the files you want to import.
+Your pattern should include the parts of the file names that are the
+same for all files, and replace the rest with the <code>*</code>
+character. Make sure to match the NDVI files, but not the Quality
+files!</li>
+<li>Replace <code>ndvi-pattern</code> with your pattern</li>
+<li>Run the code and make sure that you are getting all the files you
+want and none of the files you don’t!</li>
+</ol></div></div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4757f0d6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7599,9 +7637,700 @@ Next, we set up a folder for the files, and download the sample data there.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">project</span> <span class="o">=</span> <span class="n">earthpy</span><span class="o">.</span><span class="n">Project</span><span class="p">(</span>
-    <span class="s1">'Tubarjal Valley Saudi Arabia Irrigation'</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="s1">'gc-tubarjal'</span><span class="p">)</span>
-<span class="n">project</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Get a sorted list of NDVI tif file paths</span>
+<span class="n">ndvi_paths</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">project</span><span class="o">.</span><span class="n">project_dir</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span>
+    <span class="s1">'MOD13Q1.061__250m_16_days_NDVI*.tif'</span><span class="p">)))</span>
+
+<span class="c1"># Display the first and last three files paths to check the pattern</span>
+<span class="n">ndvi_paths</span><span class="p">[:</span><span class="mi">3</span><span class="p">],</span> <span class="n">ndvi_paths</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>([PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi/MOD13Q1.061_2001137_to_2022244/MOD13Q1.061__250m_16_days_NDVI_doy2001145000000_aid0001.tif'),
+  PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi/MOD13Q1.061_2001137_to_2022244/MOD13Q1.061__250m_16_days_NDVI_doy2001161000000_aid0001.tif'),
+  PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi/MOD13Q1.061_2001137_to_2022244/MOD13Q1.061__250m_16_days_NDVI_doy2001177000000_aid0001.tif')],
+ [PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi/MOD13Q1.061_2001137_to_2022244/MOD13Q1.061__250m_16_days_NDVI_doy2022209000000_aid0001.tif'),
+  PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi/MOD13Q1.061_2001137_to_2022244/MOD13Q1.061__250m_16_days_NDVI_doy2022225000000_aid0001.tif'),
+  PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi/MOD13Q1.061_2001137_to_2022244/MOD13Q1.061__250m_16_days_NDVI_doy2022241000000_aid0001.tif')])</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e1e6c547-8eed-4ef5-8ac2-cb379726f0e4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Repeating-tasks-in-Python">Repeating tasks in Python<a class="anchor-link" href="#Repeating-tasks-in-Python">¶</a></h2><p>Now you should have a few dozen files! For each file, you need to:</p>
+<ul>
+<li>Load the file in using the <code>rioxarray</code> library</li>
+<li>Get the date from the file name</li>
+<li>Add the date as a dimension coordinate</li>
+<li>Give your data variable a name</li>
+</ul>
+<p>You don’t want to write out the code for each file! That’s a recipe for
+copy pasta. Luckily, Python has tools for doing similar tasks
+repeatedly. In this case, you’ll use one called a <code>for</code> loop.</p>
+<p>There’s some code below that uses a <code>for</code> loop in what is called an
+<strong>accumulation pattern</strong> to process each file. That means that you will
+save the results of your processing to a list each time you process the
+files, and then merge all the arrays in the list.</p>
+<link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">Try It</div></div><div class="callout-body-container callout-body"><ul>
+<li>Look at the file names. How many characters from the end is the
+date? <code>doy_start</code> and <code>doy_end</code> are used to
+extract the day of the year (doy) from the file name. You will need to
+count characters from the end and change the values to get the right
+part of the file name. HINT: the index -1 in Python means the last
+value, -2 second-to-last, and so on.</li>
+<li>Replace any required variable names with your chosen variable
+names</li>
+</ul></div></div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0a6f7b87">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">doy_start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">25</span>
+<span class="n">doy_end</span> <span class="o">=</span> <span class="o">-</span><span class="mi">18</span>
+<span class="c1"># Loop through each NDVI image</span>
+<span class="n">ndvi_das</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ndvi_path</span> <span class="ow">in</span> <span class="n">ndvi_paths</span><span class="p">:</span>
+    <span class="c1"># Get date from file name</span>
+    <span class="c1"># print(ndvi_path)</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ndvi_path</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="n">doy_start</span><span class="p">:</span><span class="n">doy_end</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'%Y%j'</span><span class="p">)</span>
+    <span class="c1"># print(date)</span>
+    
+    <span class="c1"># Open dataset</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">rxr</span><span class="o">.</span><span class="n">open_rasterio</span><span class="p">(</span><span class="n">ndvi_path</span><span class="p">,</span><span class="n">mask_and_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+    <span class="c1"># display(da)</span>
+    <span class="c1"># da.plot()</span>
+    
+    <span class="c1"># Add date dimension and clean up metadata</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s1">'date'</span><span class="p">:</span> <span class="n">date</span><span class="p">})</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">({</span><span class="s1">'date'</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+    <span class="n">da</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'NDVI'</span>
+    <span class="c1"># display(da)</span>
+    <span class="c1"># da.plot()</span>
+    
+    <span class="c1"># Prepare for concatenation</span>
+    <span class="n">ndvi_das</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">da</span><span class="p">)</span>     
+<span class="nb">len</span><span class="p">(</span><span class="n">ndvi_das</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>154</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=73b04f70-b05b-4f10-8b16-6ecdf60ea5d7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Combine-Rasters">Combine Rasters<a class="anchor-link" href="#Combine-Rasters">¶</a></h2><p>Next, stack your arrays by date into a time series using the
+<code>xr.combine_by_coords()</code> function. You will have to tell it which
+dimension you want to stack your data in.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9344665d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Combine NDVI images from all dates</span>
+<span class="n">annual_ndvi_da</span> <span class="o">=</span> <span class="p">(</span> 
+    <span class="n">xr</span><span class="o">.</span><span class="n">combine_by_coords</span><span class="p">(</span><span class="n">ndvi_das</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span> <span class="o">=</span> <span class="s1">'YS'</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">annual_ndvi_da</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1f1f1f;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt; Size: 1MB
+Dimensions:      (date: 22, y: 85, x: 165)
+Coordinates:
+    band         int64 8B 1
+  * x            (x) float64 1kB 37.87 37.88 37.88 37.88 ... 38.21 38.21 38.22
+  * y            (y) float64 680B 30.33 30.33 30.33 30.33 ... 30.16 30.16 30.16
+    spatial_ref  int64 8B 0
+  * date         (date) datetime64[ns] 176B 2001-01-01 2002-01-01 ... 2022-01-01
+Data variables:
+    NDVI         (date, y, x) float32 1MB 0.1336 0.1343 0.1339 ... 0.2285 0.1965</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-3a57488a-93db-4c40-af2f-4c74ce94fd77" type="checkbox"/><label class="xr-section-summary" for="section-3a57488a-93db-4c40-af2f-4c74ce94fd77" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">date</span>: 22</li><li><span class="xr-has-index">y</span>: 85</li><li><span class="xr-has-index">x</span>: 165</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-5c5c4e99-7b98-4ec6-a793-60e85fc6f38f" type="checkbox"/><label class="xr-section-summary" for="section-5c5c4e99-7b98-4ec6-a793-60e85fc6f38f">Coordinates: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>band</span></div><div class="xr-var-dims">()</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">1</div><input class="xr-var-attrs-in" disabled="" id="attrs-c4edb52e-3956-4c3e-aaf0-552298bd4f18" type="checkbox"/><label for="attrs-c4edb52e-3956-4c3e-aaf0-552298bd4f18" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-32a8b01a-ef4a-4ffe-af74-b49607c79f8e" type="checkbox"/><label for="data-32a8b01a-ef4a-4ffe-af74-b49607c79f8e" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(1)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">x</span></div><div class="xr-var-dims">(x)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">37.87 37.88 37.88 ... 38.21 38.22</div><input class="xr-var-attrs-in" disabled="" id="attrs-1c72ed86-106e-417b-855e-9dab5e4182b4" type="checkbox"/><label for="attrs-1c72ed86-106e-417b-855e-9dab5e4182b4" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-300b4a6a-f1ce-43aa-8c27-256fd2870539" type="checkbox"/><label for="data-300b4a6a-f1ce-43aa-8c27-256fd2870539" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([37.873958, 37.876042, 37.878125, 37.880208, 37.882292, 37.884375,
+       37.886458, 37.888542, 37.890625, 37.892708, 37.894792, 37.896875,
+       37.898958, 37.901042, 37.903125, 37.905208, 37.907292, 37.909375,
+       37.911458, 37.913542, 37.915625, 37.917708, 37.919792, 37.921875,
+       37.923958, 37.926042, 37.928125, 37.930208, 37.932292, 37.934375,
+       37.936458, 37.938542, 37.940625, 37.942708, 37.944792, 37.946875,
+       37.948958, 37.951042, 37.953125, 37.955208, 37.957292, 37.959375,
+       37.961458, 37.963542, 37.965625, 37.967708, 37.969792, 37.971875,
+       37.973958, 37.976042, 37.978125, 37.980208, 37.982292, 37.984375,
+       37.986458, 37.988542, 37.990625, 37.992708, 37.994792, 37.996875,
+       37.998958, 38.001042, 38.003125, 38.005208, 38.007292, 38.009375,
+       38.011458, 38.013542, 38.015625, 38.017708, 38.019792, 38.021875,
+       38.023958, 38.026042, 38.028125, 38.030208, 38.032292, 38.034375,
+       38.036458, 38.038542, 38.040625, 38.042708, 38.044792, 38.046875,
+       38.048958, 38.051042, 38.053125, 38.055208, 38.057292, 38.059375,
+       38.061458, 38.063542, 38.065625, 38.067708, 38.069792, 38.071875,
+       38.073958, 38.076042, 38.078125, 38.080208, 38.082292, 38.084375,
+       38.086458, 38.088542, 38.090625, 38.092708, 38.094792, 38.096875,
+       38.098958, 38.101042, 38.103125, 38.105208, 38.107292, 38.109375,
+       38.111458, 38.113542, 38.115625, 38.117708, 38.119792, 38.121875,
+       38.123958, 38.126042, 38.128125, 38.130208, 38.132292, 38.134375,
+       38.136458, 38.138542, 38.140625, 38.142708, 38.144792, 38.146875,
+       38.148958, 38.151042, 38.153125, 38.155208, 38.157292, 38.159375,
+       38.161458, 38.163542, 38.165625, 38.167708, 38.169792, 38.171875,
+       38.173958, 38.176042, 38.178125, 38.180208, 38.182292, 38.184375,
+       38.186458, 38.188542, 38.190625, 38.192708, 38.194792, 38.196875,
+       38.198958, 38.201042, 38.203125, 38.205208, 38.207292, 38.209375,
+       38.211458, 38.213542, 38.215625])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">y</span></div><div class="xr-var-dims">(y)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">30.33 30.33 30.33 ... 30.16 30.16</div><input class="xr-var-attrs-in" disabled="" id="attrs-fae07094-5e24-49dc-a92b-851d38af366a" type="checkbox"/><label for="attrs-fae07094-5e24-49dc-a92b-851d38af366a" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-a0d03e08-dc9e-4967-88a1-d98eaa4796d5" type="checkbox"/><label for="data-a0d03e08-dc9e-4967-88a1-d98eaa4796d5" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([30.332292, 30.330208, 30.328125, 30.326042, 30.323958, 30.321875,
+       30.319792, 30.317708, 30.315625, 30.313542, 30.311458, 30.309375,
+       30.307292, 30.305208, 30.303125, 30.301042, 30.298958, 30.296875,
+       30.294792, 30.292708, 30.290625, 30.288542, 30.286458, 30.284375,
+       30.282292, 30.280208, 30.278125, 30.276042, 30.273958, 30.271875,
+       30.269792, 30.267708, 30.265625, 30.263542, 30.261458, 30.259375,
+       30.257292, 30.255208, 30.253125, 30.251042, 30.248958, 30.246875,
+       30.244792, 30.242708, 30.240625, 30.238542, 30.236458, 30.234375,
+       30.232292, 30.230208, 30.228125, 30.226042, 30.223958, 30.221875,
+       30.219792, 30.217708, 30.215625, 30.213542, 30.211458, 30.209375,
+       30.207292, 30.205208, 30.203125, 30.201042, 30.198958, 30.196875,
+       30.194792, 30.192708, 30.190625, 30.188542, 30.186458, 30.184375,
+       30.182292, 30.180208, 30.178125, 30.176042, 30.173958, 30.171875,
+       30.169792, 30.167708, 30.165625, 30.163542, 30.161458, 30.159375,
+       30.157292])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>spatial_ref</span></div><div class="xr-var-dims">()</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0</div><input class="xr-var-attrs-in" id="attrs-77a37565-2c04-4b74-8bb6-e6544ca4ad33" type="checkbox"/><label for="attrs-77a37565-2c04-4b74-8bb6-e6544ca4ad33" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-922529c8-ad3d-4e23-bff4-b66effb76c39" type="checkbox"/><label for="data-922529c8-ad3d-4e23-bff4-b66effb76c39" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>crs_wkt :</span></dt><dd>GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</dd><dt><span>semi_major_axis :</span></dt><dd>6378137.0</dd><dt><span>semi_minor_axis :</span></dt><dd>6356752.314245179</dd><dt><span>inverse_flattening :</span></dt><dd>298.257223563</dd><dt><span>reference_ellipsoid_name :</span></dt><dd>WGS 84</dd><dt><span>longitude_of_prime_meridian :</span></dt><dd>0.0</dd><dt><span>prime_meridian_name :</span></dt><dd>Greenwich</dd><dt><span>geographic_crs_name :</span></dt><dd>WGS 84</dd><dt><span>horizontal_datum_name :</span></dt><dd>World Geodetic System 1984</dd><dt><span>grid_mapping_name :</span></dt><dd>latitude_longitude</dd><dt><span>spatial_ref :</span></dt><dd>GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</dd><dt><span>GeoTransform :</span></dt><dd>37.87291666327381 0.0020833333331466974 0.0 30.333333330615915 0.0 -0.0020833333331466974</dd></dl></div><div class="xr-var-data"><pre>array(0)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">date</span></div><div class="xr-var-dims">(date)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2001-01-01 ... 2022-01-01</div><input class="xr-var-attrs-in" disabled="" id="attrs-aa67560e-5594-4c1b-9ebf-08a2a99dc25d" type="checkbox"/><label for="attrs-aa67560e-5594-4c1b-9ebf-08a2a99dc25d" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-c53b6a70-a62a-414e-88ce-5e7133c962ea" type="checkbox"/><label for="data-c53b6a70-a62a-414e-88ce-5e7133c962ea" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['2001-01-01T00:00:00.000000000', '2002-01-01T00:00:00.000000000',
+       '2003-01-01T00:00:00.000000000', '2004-01-01T00:00:00.000000000',
+       '2005-01-01T00:00:00.000000000', '2006-01-01T00:00:00.000000000',
+       '2007-01-01T00:00:00.000000000', '2008-01-01T00:00:00.000000000',
+       '2009-01-01T00:00:00.000000000', '2010-01-01T00:00:00.000000000',
+       '2011-01-01T00:00:00.000000000', '2012-01-01T00:00:00.000000000',
+       '2013-01-01T00:00:00.000000000', '2014-01-01T00:00:00.000000000',
+       '2015-01-01T00:00:00.000000000', '2016-01-01T00:00:00.000000000',
+       '2017-01-01T00:00:00.000000000', '2018-01-01T00:00:00.000000000',
+       '2019-01-01T00:00:00.000000000', '2020-01-01T00:00:00.000000000',
+       '2021-01-01T00:00:00.000000000', '2022-01-01T00:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-b10c689e-0999-49bd-8773-97266deebe96" type="checkbox"/><label class="xr-section-summary" for="section-b10c689e-0999-49bd-8773-97266deebe96">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>NDVI</span></div><div class="xr-var-dims">(date, y, x)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">0.1336 0.1343 ... 0.2285 0.1965</div><input class="xr-var-attrs-in" id="attrs-a05aea93-102d-475e-93d8-83c66c6425f3" type="checkbox"/><label for="attrs-a05aea93-102d-475e-93d8-83c66c6425f3" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-4825837b-7e3b-4339-bdec-082d3e9bcad2" type="checkbox"/><label for="data-4825837b-7e3b-4339-bdec-082d3e9bcad2" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>units :</span></dt><dd>NDVI</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd></dl></div><div class="xr-var-data"><pre>array([[[0.13361427, 0.1343    , 0.13387144, ..., 0.11654287,
+         0.24504288, 0.3828    ],
+        [0.13132857, 0.13165714, 0.13165714, ..., 0.21975715,
+         0.21975715, 0.2943714 ],
+        [0.12894285, 0.12892857, 0.12872855, ..., 0.18125713,
+         0.19122855, 0.17778572],
+        ...,
+        [0.13184285, 0.13035713, 0.13035713, ..., 0.11554285,
+         0.1148857 , 0.12895714],
+        [0.13001429, 0.12939999, 0.1319    , ..., 0.11432857,
+         0.12138572, 0.15157142],
+        [0.1294    , 0.13069999, 0.13078572, ..., 0.10821428,
+         0.12915714, 0.15702857]],
+
+       [[0.13472857, 0.13417141, 0.1334    , ..., 0.12508571,
+         0.32601425, 0.5295715 ],
+        [0.13525714, 0.13511428, 0.13511428, ..., 0.2071    ,
+         0.2071    , 0.3606143 ],
+        [0.1356    , 0.13579999, 0.13705714, ..., 0.15152857,
+         0.1651    , 0.18801428],
+...
+        [0.13257143, 0.12988572, 0.12988572, ..., 0.19052856,
+         0.1374    , 0.21858573],
+        [0.1270857 , 0.131     , 0.1334    , ..., 0.3250143 ,
+         0.20534284, 0.14534284],
+        [0.13012856, 0.13108571, 0.13509999, ..., 0.40951428,
+         0.19429998, 0.1592    ]],
+
+       [[0.13744286, 0.13808571, 0.1375    , ..., 0.1529857 ,
+         0.12371429, 0.14465714],
+        [0.13377143, 0.13592856, 0.13592856, ..., 0.14617144,
+         0.14617144, 0.14565715],
+        [0.13457142, 0.1369857 , 0.13571428, ..., 0.16374286,
+         0.16337143, 0.13561428],
+        ...,
+        [0.13112856, 0.13147143, 0.13147143, ..., 0.2268857 ,
+         0.14514287, 0.18932857],
+        [0.12848571, 0.12875713, 0.13121428, ..., 0.47364283,
+         0.26062855, 0.18037143],
+        [0.12888572, 0.131     , 0.13152857, ..., 0.49725714,
+         0.22854283, 0.19648571]]], shape=(22, 85, 165), dtype=float32)</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-61082da0-dc7e-4e28-adc9-93409ec0634d" type="checkbox"/><label class="xr-section-summary" for="section-61082da0-dc7e-4e28-adc9-93409ec0634d">Indexes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>x</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-c8398e90-9719-4e1f-81d7-01bb61c03e01" type="checkbox"><label for="index-c8398e90-9719-4e1f-81d7-01bb61c03e01" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([37.873958329940386,  37.87604166327353,  37.87812499660668,
+       37.880208329939826,  37.88229166327297,  37.88437499660612,
+       37.886458329939266,  37.88854166327241,  37.89062499660556,
+       37.892708329938706,
+       ...
+       38.196874996578124,  38.19895832991127,  38.20104166324442,
+       38.203124996577564,  38.20520832991071,  38.20729166324386,
+       38.209374996577004,  38.21145832991015,   38.2135416632433,
+       38.215624996576445],
+      dtype='float64', name='x', length=165))</pre></div></input></input></li><li class="xr-var-item"><div class="xr-index-name"><div>y</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-a72f53d4-d359-452e-bdc1-c1bb23b93889" type="checkbox"><label for="index-a72f53d4-d359-452e-bdc1-c1bb23b93889" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([ 30.33229166394934, 30.330208330616195, 30.328124997283048,
+         30.3260416639499, 30.323958330616755, 30.321874997283608,
+        30.31979166395046, 30.317708330617315, 30.315624997284168,
+        30.31354166395102, 30.311458330617874, 30.309374997284728,
+        30.30729166395158, 30.305208330618434, 30.303124997285288,
+        30.30104166395214, 30.298958330618994, 30.296874997285848,
+         30.2947916639527, 30.292708330619554, 30.290624997286407,
+        30.28854166395326, 30.286458330620114, 30.284374997286967,
+        30.28229166395382, 30.280208330620674, 30.278124997287527,
+        30.27604166395438, 30.273958330621234, 30.271874997288087,
+        30.26979166395494, 30.267708330621794, 30.265624997288647,
+         30.2635416639555, 30.261458330622354, 30.259374997289207,
+        30.25729166395606, 30.255208330622914, 30.253124997289767,
+        30.25104166395662, 30.248958330623474, 30.246874997290327,
+        30.24479166395718, 30.242708330624033, 30.240624997290887,
+        30.23854166395774, 30.236458330624593, 30.234374997291447,
+         30.2322916639583, 30.230208330625153, 30.228124997292007,
+        30.22604166395886, 30.223958330625713, 30.221874997292566,
+        30.21979166395942, 30.217708330626273, 30.215624997293126,
+        30.21354166395998, 30.211458330626833, 30.209374997293686,
+        30.20729166396054, 30.205208330627393, 30.203124997294246,
+         30.2010416639611, 30.198958330627953, 30.196874997294806,
+        30.19479166396166, 30.192708330628513, 30.190624997295366,
+        30.18854166396222, 30.186458330629073, 30.184374997295926,
+        30.18229166396278, 30.180208330629632, 30.178124997296486,
+        30.17604166396334, 30.173958330630192, 30.171874997297046,
+         30.1697916639639, 30.167708330630752, 30.165624997297606,
+        30.16354166396446, 30.161458330631312, 30.159374997298166,
+        30.15729166396502],
+      dtype='float64', name='y'))</pre></div></input></input></li><li class="xr-var-item"><div class="xr-index-name"><div>date</div></div><div class="xr-index-preview">PandasIndex</div><input disabled="" type="checkbox"><label></label><input class="xr-index-data-in" id="index-56070aa0-fd09-4c25-8017-3ec6b7367054" type="checkbox"><label for="index-56070aa0-fd09-4c25-8017-3ec6b7367054" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2001-01-01', '2002-01-01', '2003-01-01', '2004-01-01',
+               '2005-01-01', '2006-01-01', '2007-01-01', '2008-01-01',
+               '2009-01-01', '2010-01-01', '2011-01-01', '2012-01-01',
+               '2013-01-01', '2014-01-01', '2015-01-01', '2016-01-01',
+               '2017-01-01', '2018-01-01', '2019-01-01', '2020-01-01',
+               '2021-01-01', '2022-01-01'],
+              dtype='datetime64[ns]', name='date', freq='YS-JAN'))</pre></div></input></input></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-4085e298-670a-43ff-a276-6504f7027869" type="checkbox"/><label class="xr-section-summary" for="section-4085e298-670a-43ff-a276-6504f7027869" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e7d599b-e686-4f18-9d2f-ea71be0ae736">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="STEP--1:-Wrap-up">STEP -1: Wrap up<a class="anchor-link" href="#STEP--1:-Wrap-up">¶</a></h1><p>Don’t forget to store your variables so you can use them in other
+notebooks! Replace <code>var1</code> and <code>var2</code> with the variable you want to save,
+separated by spaces.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0180c8f2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">store</span> annual_ndvi_da
 </pre></div>
 </div>
 </div>
@@ -7614,52 +8343,14 @@ Next, we set up a folder for the files, and download the sample data there.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
-**Final Configuration Loaded:**
-{}
-Found 'data_home' in environment variables.
-🔄 Fetching metadata for article 29521241...
-✅ Found 2 files for download.
-[('https://ndownloader.figshare.com/files/56526608', 'tubarjal-ndvi', 'zip'), ('https://ndownloader.figshare.com/files/56526611', 'tubarjal-valley', 'zip')]
-tubarjal-ndvi
-[PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi')]
-tubarjal-valley
-[PosixPath('/workspaces/data/gc-tubarjal/tubarjal-ndvi'), PosixPath('/workspaces/data/gc-tubarjal/tubarjal-valley')]
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c8d72fe3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Storing the variable to make it available to the rest of the worlflow</span>
-<span class="o">%</span><span class="k">store</span> project
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Stored 'project' (Project)
+<pre>Stored 'annual_ndvi_da' (Dataset)
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b67edb21-141a-4860-8b26-bc24bc83d75d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1b20a104-8c53-41ed-b2de-e1df476cce74">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7670,7 +8361,7 @@ works all the way through!</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d6fa2640">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e1ee956f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7681,13 +8372,13 @@ works all the way through!</p>
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%capture</span>
 <span class="o">%%</span><span class="n">bash</span>
 <span class="c1">#Coverting to HTML</span>
-<span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="n">vegetation</span><span class="o">-</span><span class="mi">00</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span>
+<span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="n">vegetation</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="n">wrangle</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div></div></div></main>
+</main>
 </body>
 </html>
